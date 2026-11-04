@@ -27,7 +27,7 @@ Instead, authorization decisions are made using the Access Token that LSASS crea
 
 8. Child processes inherit copies.
 
-![Figure 1 - Windows Access Token Creation Process](diagrams/Access-token-diagram.png)
+![Windows Access Token Creation Process](../diagrams/Access-token-diagram.png)
 
 
 ## What Does an Access Token Contain?
@@ -40,7 +40,7 @@ Default DACL - Default permissions for newly created objects.
 ## How Windows Uses Access Tokens
 Let's use analogy. Suppose Alice wants to open a excel file called "salary.xlsx". 
 Windows perform an access check: 
-![Figure 1 - Windows Access Token Creation Process](diagrams/Win-Access-Token-usage.png)
+![Figure 1 - Windows Access Token Creation Process](../diagrams/Win-Access-Token-usage.png)
 The file has an Access Control List (ACL). An ACL is a list of rules specifying which SIDs can access an object and what operations they are allowed or denied. 
 
 
@@ -49,16 +49,16 @@ Primary token:
 Every process has one primary token. Ex: Explorer.exe , Powershell.exe, Chrome.exe. Each runs using its primary token. 
 Impersonation token :
 A thread can temporarily act as another identity. A file server receives a request from Alice. The server process runs as : SYSTEM. 
-![Figure 1 - Windows Access Token Creation Process](diagrams/Win-Token-Comparison.png)
+![Figure 1 - Windows Access Token Creation Process](../diagrams/Win-Token-Comparison.png)
 
 ## Token Inheritance
 This explains why every application know who you are. When Explorer starts , it gets your token. Later:  Explorer —> Powershell —> CMD —> Notepad. All inherit copies of the parent’s primary token. This inheritance is why opening CMD does not require you to authenticate again. 
 
 ## Viewing Access-Token using Powershell
 The images below shows the complete Access-Token after successful login into local system. 
-![Windows Access Token Creation Process](screenshots/Win-access-token.png)
+![Windows Access Token Creation Process](../screenshots/Win-access-token.png)
 
-![Windows Access Token Creation Process](screenshots/win-access-token2.png)
+![Windows Access Token Creation Process](../screenshots/win-access-token2.png)
 
 ## References
 https://learn.microsoft.com/en-us/windows/win32/secauthz/access-tokens
