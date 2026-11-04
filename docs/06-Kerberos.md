@@ -34,7 +34,7 @@ This is where pre-authentication comes in. Your password is converted into crypt
 That key encrypts a timestamp. The DC decrypts it using the stored password-derived key.
 Security benefits comes from that the password never traverses the network in plain text. The next action in the DC side is AS-REP which is authentication service reply. If authentication succeeds, the Domain Controller returns AS-REP. This contains two important items.
 
-![Figure 1 - Kerberos Authentication Workflow](..screenshots/kerberos-authentication-flow.png)
+![Figure 1 - Kerberos Authentication Workflow](../screenshots/kerberos-authentication-flow.png)
 
 
 1.	TGT – Ticket Granting Ticket. 
@@ -49,7 +49,7 @@ KDC knows you are authenticated according to your valid TGT given previously.
 # SPN – Service Principal Name.
 Every Kerberos-enabled service has an SPN. Example: 
 
-![Figure 1 - Kerberos Authentication Workflow 2](..screenshots/Kerberos-spn.png)
+![Figure 1 - Kerberos Authentication Workflow 2](../screenshots/Kerberos-spn.png)
 
 More simply SPN is a unique identifier of service in Active Directory.
 TGS-REP 
