@@ -62,6 +62,8 @@ whoami /groups
 ### Screenshot
 
 ![whoami Output](../screenshots/win_ss1.png)
+![whoami groups Output](../screenshots/whoami_groups.png)
+![whoami priv Output](../screenshots/whoami_priv.png)
 
 ### Observation
 
