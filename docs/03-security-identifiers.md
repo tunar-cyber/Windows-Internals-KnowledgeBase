@@ -22,5 +22,6 @@ S-1-5-domain-514 	Domain Guests
 
 
 ## Hands-on Observation
-![whoami user](../screenshots/win-SID.png)
+![whoami user](../screenshots/win_SID.png)
+
 The command displays both the current username and its associated Security Identifier (SID). While usernames are intended for human readability, Windows internally relies on the SID to uniquely identify the account.
