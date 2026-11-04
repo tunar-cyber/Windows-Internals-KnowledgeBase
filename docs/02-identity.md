@@ -42,8 +42,38 @@ Understanding identities helps defenders determine:
 
 
 ## Hands-on Observations
+### Objective
 
-- see the "/screenshots" for hands-on observations
+Observe the currently authenticated identity in Windows.
+
+### Command
+
+```cmd
+whoami
+```
+
+```cmd
+whoami /priv
+```
+```cmd
+whoami /groups
+```
+
+### Screenshot
+
+![whoami Output](../screenshots/win_ss1.png)
+
+### Observation
+
+The `whoami` command displays the identity currently authenticated on the system in the format `COMPUTERNAME\Username`. This allows an analyst to quickly determine which account is associated with the current session.
+
+The `whoami /groups` command display the membership in access tokens
+
+The `whoami /priv` command shows the privileges in the access tokens
+
+### Defender's Note
+
+During an investigation, this command helps verify the active user on a compromised host and correlate the identity with security events recorded in Windows Event Logs.
 
 ## Key Takeaways
 - Identity represents who an entity claims to be.
